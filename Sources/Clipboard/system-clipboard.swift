@@ -7,32 +7,27 @@ import Foundation
 #endif
 
 public enum Clipboard {
-    public static let system =
-        Channel(
-            storage: .system
-        )
+    public static let system = Channel(
+        storage: .system
+    )
 
     public static func register(
         _ name: String
     ) -> Channel {
-        Channel(
+        return Channel(
             storage: .named(
                 name
             )
         )
     }
 
-    public struct Channel:
-        Sendable
-    {
-        fileprivate let storage:
-            Storage
+    public struct Channel: Sendable {
+        fileprivate let storage: Storage
 
         fileprivate init(
             storage: Storage
         ) {
-            self.storage =
-                storage
+            self.storage = storage
         }
 
         public func read() -> String? {
@@ -52,8 +47,7 @@ public enum Clipboard {
             _ text: String
         ) -> Bool {
             #if os(macOS)
-                let pasteboard =
-                    pasteboard
+                let pasteboard = pasteboard
 
                 pasteboard.clearContents()
 
@@ -67,9 +61,7 @@ public enum Clipboard {
                     return false
                 }
 
-                pasteboard.string =
-                    text
-
+                pasteboard.string = text
                 return true
             #else
                 return false
@@ -86,10 +78,9 @@ public enum Clipboard {
 
                 case .named(let name):
                     NSPasteboard(
-                        name:
-                            NSPasteboard.Name(
-                                name
-                            )
+                        name: NSPasteboard.Name(
+                            name
+                        )
                     )
                 }
             }
@@ -103,10 +94,9 @@ public enum Clipboard {
 
                 case .named(let name):
                     UIPasteboard(
-                        name:
-                            UIPasteboard.Name(
-                                name
-                            ),
+                        name: UIPasteboard.Name(
+                            name
+                        ),
                         create: true
                     )
                 }
@@ -114,12 +104,9 @@ public enum Clipboard {
         #endif
     }
 
-    public typealias SystemClipboard =
-        Channel
+    public typealias SystemClipboard = Channel
 
-    fileprivate enum Storage:
-        Sendable
-    {
+    fileprivate enum Storage: Sendable {
         case system
         case named(String)
     }

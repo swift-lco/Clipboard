@@ -1,67 +1,31 @@
 {
-  "originHash" : "16557f8b3b7350e9ce0d8a9b3763a731872946cd386e598dba22bd01234b0c5a",
+  "originHash" : "1488b94178c7ab117041de21843e93ef2917d9811afe40ef320bf958a120973f",
   "pins" : [
-    {
-      "identity" : "ansi",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/leviouwendijk/ANSI.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "073d9ca7870b688a312608acf14eae6ba052c0d6"
-      }
-    },
     {
       "identity" : "arguments",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/leviouwendijk/Arguments.git",
       "state" : {
         "branch" : "master",
-        "revision" : "a4317bd7d254b68f66a63f54d159a87f157b3a0e"
+        "revision" : "bb9985bc8225bc5300997ce6378d16ad37f92989"
       }
     },
     {
-      "identity" : "difference",
+      "identity" : "atomos",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/leviouwendijk/Difference.git",
+      "location" : "https://github.com/leviouwendijk/Atomos.git",
       "state" : {
         "branch" : "master",
-        "revision" : "ca0f33316fcf56ace04f1f5a1bb178667a291abc"
+        "revision" : "5ffdb160c4913e02214020eb75ac620900cf2914"
       }
     },
     {
-      "identity" : "primitives",
+      "identity" : "testing",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/leviouwendijk/Primitives.git",
+      "location" : "https://github.com/leviouwendijk/Testing.git",
       "state" : {
         "branch" : "master",
-        "revision" : "7992ebc66ba098758e574befc1b869978b38e82c"
-      }
-    },
-    {
-      "identity" : "strings",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/leviouwendijk/Strings",
-      "state" : {
-        "branch" : "master",
-        "revision" : "86a939d7bbb3e25808f88fbcedcee4069a5a5ae1"
-      }
-    },
-    {
-      "identity" : "terminal",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/leviouwendijk/Terminal.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "cc0917d387d78dec543959dbef05f13e76b1f7b5"
-      }
-    },
-    {
-      "identity" : "testflows",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/leviouwendijk/TestFlows.git",
-      "state" : {
-        "branch" : "master",
-        "revision" : "ef72deb44f924372959189d0c258c5cf7e2ba8ae"
+        "revision" : "105eecb68c3db99119dff3afeb846b7923abbc85"
       }
     }
   ],
